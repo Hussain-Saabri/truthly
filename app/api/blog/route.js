@@ -23,6 +23,7 @@ export async function GET(request) {
     }
     if (slug) {
       console.log("inside the slug function");
+
       const blogs = await Blog.find({ slug: slug });
       console.log(blogs);
       if (!blogs) {
@@ -41,18 +42,37 @@ export async function GET(request) {
 }
 
 // PUT: Update a blog
-export async function PUT(req) {
-  console.log("Inside the put function");
-    const body = await req.json(); // 
-    const { _id, title, slug, blogcategory, tags, status, description, audioLink } = body;
-    //connecting to the mongodb
+export async function PUT(request) {
+  console.log("Inside the update function for updating the view");
+
+  const { searchParams } = new URL(request.url);
+  const slug = searchParams.get("slug");
+console.log("Slug from URL:", slug);
+  if (!slug) {
+    return NextResponse.json({ message: "Slug is required" }, { status: 400 });
+  }
+
+  try {
+    console.log("Inside try block for updating the view")
     await connectMongoDB();
-    //updating the blog by id 
-    await Blog.updateOne({ _id }, {
-            title, slug, description, blogcategory, tags, status, audioLink
-        });
-      return NextResponse.json({ message: "Blog updated successfully" });
-  
+
+   const res = await Blog.updateOne(
+  { slug },
+  { $inc: { 
+viewsCount: 1 } } 
+);
+
+console.log("updating result of view",res);
+
+    if (res.matchedCount === 0) {
+      return NextResponse.json({ message: "Blog not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ message: "Blog count updated successfully" }, res);
+  } catch (error) {
+    console.error("Error updating view count:", error);
+    return NextResponse.json({ message: "Server error", error }, { status: 500 });
+  }
 }
 
 // Delete:Delete an blog

@@ -9,6 +9,7 @@ const blogSchema=new Schema({
     tags:[{type:String}],
     status: { type: String },
     audioLink: { type: String },
+    viewsCount:{type: Number, default: 0,},
     },
     
 {
@@ -19,5 +20,5 @@ const blogSchema=new Schema({
 
 // Prevent model overwrite error in Next.js, model gets saved in the internak memory/register
 
-const Blog=models.Blog || model('Blog',blogSchema,'blogtest');
+const Blog=models.Blogtest || model('Blogtest',blogSchema,'blogtest');
 export default Blog;

@@ -28,12 +28,15 @@ useEffect(() => {
       if (slug) {
         try {
           const response = await axios.get(`/api/blog?slug=${slug}`);
+          console.log("All blogs",response.data)
           setAllblogs(response.data);
         } catch (error) {
           console.error("Error fetching blog:", error);
         }
       }
     };
+
+    
 
     const fetchAllPublishedBlogs = async () => {
       try {
@@ -48,6 +51,24 @@ useEffect(() => {
     fetchBlog();
     fetchAllPublishedBlogs();
   }, [slug]);
+
+    useEffect(() => {
+      const incrementViews=async()=>{
+        if(slug)
+        {
+          try{
+            console.log("getting the views")
+            const response=await axios.put(`/api/blog?slug=${slug}`) 
+            console.log("getting the count from api",response);
+
+          }catch(error){
+
+          }
+        }
+      };
+      incrementViews();
+    
+    },[slug])
 //dipaying the first image
 {/*
   const extractFirstImageUrl = (markdown) => {
@@ -88,7 +109,7 @@ useEffect(() => {
               year: 'numeric',
             })
           : 'Date not available'}  .
-        1 Min Read ・ <span className="text-red-500 font-semibold">{views} Views</span>
+        1 Min Read ・ <span className="text-red-500 font-semibold">{allblogs?.[0]?.viewsCount} Views</span>
       </p>
     </div>
 
@@ -123,19 +144,21 @@ useEffect(() => {
   components={{
     code: Code,
     img: ({ node, ...props }) => (
-      <>
-        <img
-          {...props}
-          className="w-full h-auto max-h-[300px] rounded-xl object-cover my-4 mx-auto sm:max-h-[450px]"
-          alt={props.alt || 'Blog image'}
-        />
-        {props.alt && (
-          <p className="text-sm text-gray-500 mt-2 italic text-center my-6 decoration-2 underline">
-            {props.alt}
-          </p>
-        )}
-      </>
-    ),
+  <>
+    <img
+      {...props}
+      className="w-full h-auto max-h-[300px] rounded-xl object-cover my-4 mx-auto sm:max-h-[450px]"
+      alt={props.alt || 'Blog image'}
+    />
+    {props.alt && (
+      <span className="block text-sm text-gray-500 mt-2 italic text-center my-6 decoration-2 underline">
+        {props.alt}
+      </span>
+    )}
+  </>
+),
+
+
     iframe: ({ node, ...props }) => (
       <div className="overflow-hidden rounded-xl shadow-lg my-6">
         <iframe
