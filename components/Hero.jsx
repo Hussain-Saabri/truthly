@@ -15,6 +15,7 @@ function extractFirstImage(markdown) {
 
 function markdownToPlainText(markdown) {
   return markdown
+    .replace(/<iframe.*?<\/iframe>/gs, "")     // remove iframes
     .replace(/!\[.*?\]\(.*?\)/g, "")           // remove images
     .replace(/\[.*?\]\(.*?\)/g, "")            // remove links
     .replace(/[*_~`>#-]/g, "")                 // remove markdown symbols
