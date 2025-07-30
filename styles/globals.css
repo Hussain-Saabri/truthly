@@ -29,9 +29,17 @@ body {
 
 .slugpage {
   position: relative;
+ 
+  
+  font-family: 'Nunito', sans-serif;
+ margin: 0;
   
   /* background-color: #eeeeee65; */
   font-family: 'Nunito', sans-serif;
+}
+.slugblog{
+  right:15px;
+  position: relative;
 }
 .styled-hr {
   border: 1px solid #dee2e6; /* Similar to Bootstrap table border color */
@@ -45,7 +53,7 @@ body {
 .slugtitle {
   font-size: 30px;
   position: relative;
-  top: -28px;
+  
   line-height: 35px;
   text-align: left;
   font-weight: bolder;
@@ -75,11 +83,12 @@ text-transform: uppercase;
     text-align: center;
 }
 .topslug_titles h5 {
-  margin-top: -1rem;
+
   font-size: 18px;
   color: #8d9aae;
   font-weight: 400;
   left: 14px;
+top:10px;
   position: relative;
 }
 .audio{
