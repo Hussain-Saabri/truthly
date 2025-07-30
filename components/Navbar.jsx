@@ -11,9 +11,11 @@ const Navbar = () => {
     <div className="flex justify-between items-center py-3">
 
       {/* LOGO */}
+      <Link href="/">
     <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-[#5B21B6] dark:text-white tracking-wide uppercase">
   Truthly
 </h1>
+</Link>
 
 
 
