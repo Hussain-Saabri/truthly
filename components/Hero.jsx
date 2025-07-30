@@ -66,12 +66,12 @@ console.log(allblogs.length);
       </h1>
 
       {/* Subtext */}
-      <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+      <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto ">
         A clean, powerful platform to express your thoughts and reach the world with your stories.
       </p>
 
       {/* Search Bar */}
-      <div className="mt-6 flex justify-center max-w-xl mx-auto border border-gray-300 shadow-md rounded-full overflow-hidden bg-white">
+      <div className="mt-6 px-4 sm:px-0 flex justify-center max-w-xl mx-auto border border-gray-300 shadow-md rounded-full overflow-hidden bg-white">
         <input
           type="text"
           placeholder="Search for blogs"

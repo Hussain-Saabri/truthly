@@ -23,3 +23,422 @@ body {
   background-size: 200% 200%;
   animation: gradient-x 5s ease infinite;
 }
+/* ================================================== */
+/*                                Home Slug Page */
+/* ================================================== */
+
+.slugpage {
+  position: relative;
+  
+  /* background-color: #eeeeee65; */
+  font-family: 'Nunito', sans-serif;
+}
+.styled-hr {
+  border: 1px solid #dee2e6; /* Similar to Bootstrap table border color */
+            width: 250px;
+            margin: 20px 0;
+}
+.dark .slugpage {
+  background-color: #1a202c;
+}
+
+.slugtitle {
+  font-size: 30px;
+  position: relative;
+  top: -28px;
+  line-height: 35px;
+  text-align: left;
+  font-weight: bolder;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  left: 16px;
+  white-space: normal;
+  margin: 0 auto;
+  padding: -1px 10px;
+}
+
+.dark .slugtitle {
+  color: #edf2f7;
+}
+.latest_pub{
+  line-height: 1.6;
+  
+  padding:5px;
+   
+    font-family: var(--ff-one);
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: rgb(52, 30, 213);
+    border-radius: 5px;
+  color: white;
+text-transform: uppercase;
+    text-align: center;
+}
+.topslug_titles h5 {
+  margin-top: -1rem;
+  font-size: 18px;
+  color: #8d9aae;
+  font-weight: 400;
+  left: 14px;
+  position: relative;
+}
+.audio{
+  padding-top: 24px;
+    padding-bottom: -6px;
+}
+.dark .topslug_titles h5 {
+  color: #aec2dd;
+
+}
+
+.topslug_titles h5 span {
+  color: #61728a;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.dark .topslug_titles h5 span {
+  color: #edf2f7;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.topslug_titles h5 span:last-child {
+  color: #e74717;
+}
+.slug_page_container{
+  display: flex;
+  gap: 2rem;
+}
+
+.leftblog_data_markdown {
+  position: relative;
+  width: 1000px;
+}
+.rightblog_data_markdown {
+  position: relative;
+  width: 300px;
+  top: 16px;
+}
+.rightblog_data_markdown a:hover,
+.rightblog_data_markdown a:hover img {
+    filter: brightness(0.9); /* Increase brightness */
+    transform: scale(1); /* Optional: slightly enlarge */
+    text-decoration: underline;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.leftblog_data_markdown a:hover,
+.leftblog_data_markdown a:hover img {
+    filter: brightness(0.9); /* Increase brightness */
+    transform: scale(1); /* Optional: slightly enlarge */
+    text-decoration: underline;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.rightblog_data_markdown img {
+  
+  height:200px;
+  width:250px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.blogs_showing{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+
+}
+.header_sec img {
+  width: 50%;
+ position: relative;
+ left: 25%;
+}
+.blogshowing_bloginfo p{
+  font-size: 15px;
+  margin-bottom: 12px;
+  margin-top: 0;
+  margin-right: -119px;
+ 
+  font-weight: 800;
+  width: 215px;
+}
+.leftblog_data_markdown .blogs_showing .bloginfo a:hover,
+.leftblog_data_markdown .blogs_showing  a:hover img {
+    filter: brightness(0.9); /* Increase brightness */
+    transform: scale(1); /* Optional: slightly enlarge */
+    text-decoration: underline;
+}
+.leftblog_data_markdown .blogs_showing img {
+  height: 121px;
+  width:217px;
+}
+.leftblog_data_markdown .blogs_showing .styled-hr {
+  border: 1px solid #dee2e6; /* Similar to Bootstrap table border color */
+  width: 219px;
+  margin: 20px 0;
+  
+}
+
+.recent-blogs {
+  flex: 1; /* Adjust flex value as needed */
+  background-color: black; /* Optional background color */
+  /* Optional padding */
+  width:250px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 18px;
+  padding-right: -10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  text-align: center;
+  color: white; /* Optional border-radius */
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+.rightblog_data_markdown .bloginfo p{
+  font-size: 15px;
+  margin-bottom: 12px;
+  margin-top: 0;
+  padding-right: 10px;
+  /* text-align: justify; */
+  
+  font-weight: 800;
+
+  
+}
+
+.leftblog_data_markdown img {
+  width: 100%;
+  height: 380px;
+ 
+  object-fit: cover;
+}
+
+.blogcontent {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #fff;
+  border: 1px solid #c6c6cc;
+  border-radius: 20px;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+  overflow: hidden;
+  font-weight: 500;
+  text-align: justify;
+
+}
+ .logo{
+  
+            font-weight: bold;
+            text-transform: none;
+            letter-spacing: 1px;
+            margin: 0;
+           position: relative;
+           left: -14px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(45deg, #ff6f61, #dce775);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transition: background-position 0.5s ease-in-out, transform 0.3s ease-in-out;
+
+} 
+.logo:hover {
+  background-position: 100% 100%;
+  transform: scale(1.05);
+}
+@media (max-width: 1200px) {
+  .logo {
+      font-size: 3rem;
+  }
+}
+@media (max-width: 900px) {
+  .logo {
+      font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .logo {
+      font-size: 1rem;
+  }
+}
+@media (max-width: 400px) {
+  .logo {
+      font-size: 0.5rem;
+  }
+}
+.dark .blogcontent {
+  background-color: #2d3748;
+  color: #e2e8f0;
+}
+
+.blogh1 {
+  font-size: 45px;
+
+}
+
+.blogcontent h1:first-child {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.blogcontent .flex-col {
+  border-bottom: 1px solid #888;
+}
+
+.blogcontent {
+  /* padding: 2rem; */
+  border: none;
+}
+
+.blogcontent h2 {
+  font-size: 24px;
+  padding: 0;
+  border: none;
+  font-weight: 700;
+  margin: 24px 0;
+  line-height: 1.7;
+}
+
+.blogcontent h3 {
+  font-size: 18px;
+  margin: 18px 0;
+  padding: 0;
+  line-height: 1.7;
+  border: none;
+}
+
+.blogcontent blockquote {
+  position: relative;
+  margin: 16px 0;
+  padding: 5px 8px 5px 30px;
+  background: none repeat scroll 0 0 rgba(102, 128, 153, .05);
+  color: #333;
+  border: none;
+  border-left: 10px solid #d6dbdf;
+}
+
+.blogcontent ol,
+.blogcontent ul {
+  font-size: 14px;
+  line-height: 28px;
+  padding-left: 36px;
+}
+
+.blogcontent li {
+  margin-bottom: 8px;
+  line-height: 1.7;
+  list-style: auto;
+}
+
+.blogcontent p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 8px 0;
+  font-family: -apple-system, 'Arial', 'Helvetica';
+}
+
+.rightslug_data {
+  position: sticky;
+  top: 5%;
+  width: 350px;
+  height: auto;
+  margin-top: 0;
+}
+
+.slug_profile_info {
+  position: relative;
+  width: 100%;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.dark .slug_profile_info {
+  border: none;
+  background-color: #2d3748;
+}
+
+.slugprofile_sec {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slug_profile_img {
+  position: relative;
+  width: 100%;
+}
+
+.slug_profile_img {
+  position: relative;
+  width: 90px;
+}
+
+.slug_profile_img img {
+  width: 100%;
+  height: 100%;
+  margin-top: -10px;
+  margin-left: 10px;
+  object-fit: cover;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 20px;
+  z-index: 2;
+}
+
+.image_bg_top0 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  background-color: #dddddd;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.image_bg_top1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 130px;
+  height: 130px;
+  z-index: 9;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 5px 8px #8f9fe6;
+}
+
+.profile_imgbg {
+  width: 100%;
+  height: 100%;
+  background-image: url('/img/profile_bg.png');
+  background-size: 8rem;
+  position: absolute;
+  opacity: 0.15;
+  top: 0px;
+  left: 0px;
+}
+
+.slug_profile_info h3 {
+  color: #2b3a53;
+  margin: 1.5rem 0;
+  margin-bottom: 0.7rem;
+}
+
+.dark .slug_profile_info h3 {
+  color: #becbe0;
+}
+
+.slug_profile_info h4 {
+  color: #646f81;
+  font-weight: 500;
+}
+
+.dark .slug_profile_info h4 {
+  color: #8d99ae;
+}
